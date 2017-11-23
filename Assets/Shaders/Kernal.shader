@@ -12,10 +12,18 @@
 	float3 _EmitterPos;
 	float3 _EmitterSize;
 
+	// PRNG function
+	float nrand(float2 uv, float salt)
+	{
+		uv += float2(salt, 1);
+		return frac(sin(dot(uv, float2(12.9898, 78.233))) * 43758.5453);
+	}
+
+
 	//Particle Generators
 	float4 new_particle_position(float2 uv)
 	{
-		float3 p = float3(uv, 0);
+		float3 p = float3(10, 10, 10);
 		return float4(p, 0.5);
 	}
 
