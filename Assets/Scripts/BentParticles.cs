@@ -304,6 +304,8 @@ public class BentParticles : MonoBehaviour {
         }
 
         var props = _props;
+
+        //Assign kernel _positiion buffer to Instanced object's shader
         props.SetTexture("_PositionBuffer", _positionBuffer2);
 
         //Temp Variables

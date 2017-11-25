@@ -1,4 +1,4 @@
-﻿Shader "BentSpray/Kernal" {
+﻿Shader "BentParticles/Kernal" {
 	Properties {
 		_PositionBuffer("-", 2D) = "" {}
 	}
@@ -23,7 +23,8 @@
 	//Particle Generators
 	float4 new_particle_position(float2 uv)
 	{
-		float3 p = float3(10, 10, 10);
+		float3 p = float3(1, 1, 1);
+		p += _EmitterPos;
 		return float4(p, 0.5);
 	}
 

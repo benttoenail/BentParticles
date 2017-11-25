@@ -394,7 +394,7 @@ MonoBehaviour:
   _shapes:
   - {fileID: 4300000, guid: 19a1a8c92d2b7334cb1e7c38cae57458, type: 3}
   _scale: 1
-  _material: {fileID: 2100000, guid: 8ead0837d935e3e4a99860ea1aa91507, type: 2}
+  _material: {fileID: 2100000, guid: 3ef72e9870797b24687de9e6eb29af9d, type: 2}
   _castShadows: 1
   _receiveShadows: 1
   _defaultMaterial: {fileID: 0}
