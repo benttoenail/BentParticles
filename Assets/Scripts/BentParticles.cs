@@ -313,10 +313,14 @@ public class BentParticles : MonoBehaviour {
         var position = transform.position;
         var rotation = transform.rotation;
         var material = _material ? _material : _defaultMaterial;
+        var uv = new Vector2(0.5f / _positionBuffer2.width, 0);
 
         for (var i = 0; i < _positionBuffer2.height; i++)
         {
-            Graphics.DrawMesh(mesh, position, rotation, material, 0, null, 0, props, _castShadows, _receiveShadows);
+            uv.y = (0.5f + i) / _positionBuffer2.height;
+            props.SetVector("_BufferOffset", uv);
+            Graphics.DrawMesh(mesh, position, rotation, material, 
+                0, null, 0, props, _castShadows, _receiveShadows);
         }
 
 	}
